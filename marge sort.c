@@ -52,10 +52,8 @@ void mergeSort(int arr[], int left, int right)
     if (left < right)
     {
         int mid = left + (right - left) / 2;
-
         mergeSort(arr, left, mid);
         mergeSort(arr, mid + 1, right);
-
         merge(arr, left, mid, right);
     }
 }
@@ -64,7 +62,9 @@ void printArray(int arr[], int n)
 {
     int i;
     for (i = 0; i < n; i++)
+    {
         printf("%d ", arr[i]);
+    }
     printf("\n");
 }
 
@@ -80,7 +80,6 @@ int main()
     }
 
     mergeSort(arr, 0, n - 1);
-
     printf("\nSorted array is \n");
     printArray(arr, n);
     return 0;
